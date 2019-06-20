@@ -1,14 +1,11 @@
-var playlist = {
-  metallica: 'FadeToBlack'
-};
+var playlist = {artist:"songs"};
 
-function updatePlaylist (playlist, artistName, songTitle){
-  var playlist = { [artistName]:songTitle }
-  return playlist
+var updatePlaylist = function (obj, artist, song) {
+  obj[artist] = song;
+  return obj;
 }
 
-function removeFromPlaylist (playlist, artistName){
-
-  delete playlist [artistName]
-  return playlist
-} 
+var removeFromPlaylist = function(playlist,artist) {
+  delete playlist[artist];
+  return playlist;
+}
